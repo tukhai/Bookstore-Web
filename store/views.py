@@ -18,6 +18,6 @@ def store(request):
     else:
         request.session['location'] = "unknown" 
         
-    return render(request, 'store.html', context)
+    return render(request, 'base.html', context)
 
 
