@@ -1,8 +1,10 @@
 
 {% extends 'templates/base.html' %}
+{% load i18n %}
+{% load crispy_forms_tags %}
 
 {% block title %}My amazing blog{% endblock %}
 
 {% block content %}
-	<h1>See you soon!</h1>		
+	<h1>{% trans "Successfully logged out" %}.</h1>		
 {% endblock content %}
