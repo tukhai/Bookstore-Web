@@ -254,7 +254,7 @@ img.bg {
 }
 
 /* Storefront styles */
-.storefront_book_display {
+/*.storefront_book_display {
 	width: 200px;
 	display: inline-block;
 	text-align: center;
@@ -271,8 +271,13 @@ img.bg {
 	display: block;
 }
 
+.storefront_add_to_cart {
+	display: block;
+	margin-top: 10px;
+}*/
+
 /* Book detail styles */
-.detail_book_display {
+/*.detail_book_display {
 	text-align: center;
 	margin-top: 20px;
 }
@@ -301,4 +306,4 @@ img.bg {
 	font-size: 20px;
 	display: block;
 	font-weight: bold;
-}
+}*/
