@@ -1,0 +1,12 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}</title>
+    </head>
+
+    <body>
+    {% block content %}{% endblock content %}
+    </body>
+</html>
