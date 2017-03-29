@@ -40,11 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social.apps.django_app.default',
     # 'social_django',
+    'store',
     'registration',
     'bootstrap3',
     'bootstrap_themes',
     'compressor',
-    'store',
 ]
 
 MIDDLEWARE = [
