@@ -15,7 +15,11 @@
 	
 	<link href="{% static 'base/css/style.css' %}" rel="stylesheet" type="text/css">
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://checkout.stripe.com/checkout.js"></script>
 	
+	<script src="{% static 'base/js/jquery.cookie.js' %}"></script>
+		
 {% endblock %}
 
 {% block bootstrap3_title %}
@@ -43,7 +47,7 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				
 				<ul class="nav navbar-nav">
-					<li class="hvr-curl-top-right"><a href="{% url 'store' %}">Home</a></li>
+					<li class="hvr-curl-top-right"><a href="{% url 'index' %}">Home</a></li>
 					<li class="hvr-curl-top-right"><a href="#about">About</a></li>
 					<li class="hvr-curl-top-right"><a href="#contact">Contact</a></li>
 					{% if request.user.is_authenticated %}
