@@ -75,6 +75,7 @@ TEMPLATES = [
                 # 'social_django.context_processors.backends',
                 'social.apps.django_app.context_processors.login_redirect',
                 # 'social_django.context_processors.login_redirect',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -144,6 +145,9 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = "/media/"
+
 # Registration
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_AUTO_LOGIN = True
@@ -151,9 +155,9 @@ LOGIN_REDIRECT_URL = '/store/'
 
 # Email settings
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_HOST_USER = "twohourbinhyen@gmail.com"
-EMAIL_HOST_PASSWORD = "iahk9425"
+EMAIL_HOST = "smtp.mailgun.org"
+EMAIL_HOST_USER = "postmaster@sandboxb39259667e4845ad88706d30db16925c.mailgun.org"
+EMAIL_HOST_PASSWORD = "f69ae76292278c4e523d17c8a6001630"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = "twohourbinhyen@gmail.com"
