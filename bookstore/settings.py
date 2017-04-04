@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
     'social.apps.django_app.default',
     # 'social_django',
     'bootstrap3',
@@ -165,3 +166,5 @@ DEFAULT_FROM_EMAIL = "twohourbinhyen@gmail.com"
 #Social Auth - Facebook
 SOCIAL_AUTH_FACEBOOK_KEY = '217422695401539'
 SOCIAL_AUTH_FACEBOOK_SECRET = '79e85f726f969529c132416a6affc2d7'
+
+GEOIP_PATH = 'geo/'

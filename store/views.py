@@ -6,6 +6,7 @@ from django.http import JsonResponse
 from django.core.mail import EmailMultiAlternatives
 from django.template import Context
 from django.template.loader import render_to_string
+from django.contrib.gis.geoip2 import GeoIP2
 
 import string, random
 import paypalrestsdk, stripe
@@ -44,6 +45,12 @@ def book_details(request, book_id):
     context = {
         'book': book,
     }
+    #geo_info = GeoIP2().city(request.META.get('REMOTE_ADDR'))
+    geo_info = GeoIP2().city('192.206.151.131')
+    if not geo_info:
+        geo_info = GeoIP2().city("72.14.207.99")
+    context['geo_info'] = geo_info
+    
     if request.user.is_authenticated():
         if request.method == "POST":
             form = ReviewForm(request.POST)
@@ -51,7 +58,9 @@ def book_details(request, book_id):
                 new_review = Review.objects.create(
                     user=request.user,
                     book=context['book'],
-                    text=form.cleaned_data.get('text')
+                    text=form.cleaned_data.get('text'),
+                    latitude=geo_info['latitude'],
+                    longitude=geo_info['longitude'],
                 )
                 new_review.save()
 
@@ -78,6 +87,7 @@ def book_details(request, book_id):
                 form = ReviewForm()
                 context['form'] = form
     context['reviews'] = book.review_set.all()
+    
     return render(request, 'store/detail.html', context)
 
 
