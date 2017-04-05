@@ -25,6 +25,8 @@ SECRET_KEY = '1c0pj=k&ow%n%)#yo7k25b-wio-7#bbtg9)^obyr5n!z0*qmwy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+INTERNAL_IPS = ('127.0.0.1')
+
 ALLOWED_HOSTS = []
 
 
@@ -47,6 +49,7 @@ INSTALLED_APPS = [
     'bootstrap_themes',
     'compressor',
     'tastypie',
+    #'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +61,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'social_django.middleware.SocialAuthExceptionMiddleware',
+    #'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'bookstore.urls'
