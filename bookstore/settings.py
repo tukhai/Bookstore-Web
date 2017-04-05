@@ -173,3 +173,33 @@ SOCIAL_AUTH_FACEBOOK_KEY = '217422695401539'
 SOCIAL_AUTH_FACEBOOK_SECRET = '79e85f726f969529c132416a6affc2d7'
 
 GEOIP_PATH = 'geo/'
+
+'''LOGGING= {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'basic': {
+            'format': '%(asctime)s %(name)-20s %(levelname)-8s %(module)s | %(message)s'
+        },
+    },
+    'handlers': {
+        'file':{
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'formatter': 'basic',
+            'maxBytes': 10000,
+            'backupCount': 10,
+            'filename': os.path.join(BASE_DIR, 'store-logger.log'),
+        },
+    },
+    'loggers': {
+        'store': {
+            'handlers':['file'],
+            'level': 'DEBUG',
+        },
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+        }
+    }
+}'''
