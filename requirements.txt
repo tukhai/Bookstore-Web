@@ -49,7 +49,7 @@ django-social-auth==0.7.28
 enum34==1.1.6
 functools32==3.2.3.post2
 futures==3.0.5
-httplib2==0.10.3
+httplib2==0.18.0
 idna==2.2
 ipaddress==1.0.18
 isodate==0.5.4
