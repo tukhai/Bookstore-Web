@@ -83,7 +83,7 @@ python-openid==2.2.5
 python-social-auth==0.2.21
 pytz==2016.10
 pywin32-ctypes==0.0.1
-PyYAML==3.12
+PyYAML==5.4
 requests==2.13.0
 requests-oauthlib==0.8.0
 scikit-learn==0.18.1
