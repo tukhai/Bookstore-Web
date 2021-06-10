@@ -38,7 +38,7 @@ cffi==1.9.1
 colorama==0.3.7
 cryptography==1.7.2
 cycler==0.10.0
-Django==1.10.5
+Django==2.2.24
 django-appconf==1.0.2
 django-bootstrap-themes==3.3.6
 django-bootstrap3==8.2.1
